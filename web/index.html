@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Sensible Alarm!</title>
+  
+<meta name="viewport" content="width=device-width">
+
+<!-- styles -->
+
+<link href="positron/positron.css" type="text/css" rel="stylesheet"></link>
+
+<style>
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 3vw;
+    background: black;
+  }
+  
+  button {
+    font-size: 3vw;
+  }
+  
+  
+  
+  #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vw;
+    text-align: center;
+    background: rgba(30,87,153,1);
+    color: white;
+    box-shadow: 0 2vw 3vw rgba(0,0,0,0.3);
+    z-index: 1000;
+    font-size: 5vw;
+    line-height: 11vw;
+    font-weight: lighter;
+    
+    
+  }
+  
+  .alarm-code {
+    position: absolute;
+    top: 10vw;
+    width: 100vw;
+    height: 100vw;
+    background: #333;
+  }
+  
+  .code-number {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    width: 30vw;
+    height: 20vw;
+    text-align: center;
+    background: #eee;
+    line-height: 22vw;
+    font-size: 10vw;
+    border-radius: 20vw;
+
+    
+  }
+  .code-number:active { 
+    background: lightgreen !important;
+  }
+  
+  .code-number:nth-of-type(1) { top: 3vw; left: 3vw; }
+  .code-number:nth-of-type(2) { top: 3vw; left: 35vw; }
+  .code-number:nth-of-type(3) { top: 3vw; left: 67vw; }
+  .code-number:nth-of-type(4) { top: 25vw; left: 3vw; }
+  .code-number:nth-of-type(5) { top: 25vw; left: 35vw; }
+  .code-number:nth-of-type(6) { top: 25vw; left: 67vw; }
+  .code-number:nth-of-type(7) { top: 47vw; left: 3vw; }
+  .code-number:nth-of-type(8) { top: 47vw; left: 35vw; }
+  .code-number:nth-of-type(9) { top: 47vw; left: 67vw; }
+
+  .submit-code {
+    position: absolute;
+    top: 80vw;
+    width: 100vw;
+    height: 20vw;
+    background-color: lightgreen;
+    text-align: center;
+    line-height: 20vw;
+    font-size: 10vw;
+    border-radius: 20vw;
+  }
+  
+  .submit-code:active {
+    background-color: #666; 
+  }
+
+</style>
+
+<!-- scripts -->
+
+<script src="monohm.js" type="text/javascript"></script>
+<script src="positron/positron.js" type="text/javascript"></script>
+<script src="positron/prefixfree.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  <div id="header" p-action="(click) ajaxget: open/door">Open door?</div>
+  
+  <div class="alarm-code">
+    <div class="code-number">1</div>
+    <div class="code-number">2</div>
+    <div class="code-number">3</div>
+    <div class="code-number">4</div>
+    <div class="code-number">5</div>
+    <div class="code-number">6</div>
+    <div class="code-number">7</div>
+    <div class="code-number">8</div>
+    <div class="code-number">9</div>
+  
+  </div>
+  
+  <div class="submit-code"
+    p-action-1="(click) ajaxget: submit/code"
+		p-action-1-params="code: 1234"
+       >disable</div>
+  
+</body>
+</html>
+

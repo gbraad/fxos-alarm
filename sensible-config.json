@@ -1,0 +1,7 @@
+{
+	"name" : "FirefoxOS Alarm",
+	"type" : "_sensible._tcp.local",
+	"port" : 3099,
+	"description" : "Sensible Alarm on FirefoxOS",
+	"hostname" : "alarm-fxos.local"
+}

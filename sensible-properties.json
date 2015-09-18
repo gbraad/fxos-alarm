@@ -1,0 +1,10 @@
+[
+	{
+		"name" : "alarm code",
+		"type" : "string",
+		"priority" : 0,
+		"readonly" : false,
+		"maxlength" : 128,
+		"value" : ""
+	}
+]
